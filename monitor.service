@@ -1,0 +1,10 @@
+[Unit]
+Description=Servicio de monitoreo
+After=network.target
+
+[Service]
+ExecStart=/home/tachoulli/monitor.sh "yes > /dev/null" 1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
